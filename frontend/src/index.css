@@ -1,0 +1,43 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --orange: #ff7900;
+  --orange-dark: #ff7900;
+  --orange-light: #fff2ec;
+  --white: #ffffff;
+  --gray-100: #f7f7f8;
+  --gray-200: #ebebed;
+  --gray-400: #b0adb8;
+  --gray-600: #6b6777;
+  --gray-900: #1a1820;
+  --font: 'Nunito', sans-serif;
+  --radius: 12px;
+  --shadow: 0 8px 40px rgba(0,0,0,0.10);
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: var(--font);
+  background: var(--white);
+  color: var(--gray-900);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
