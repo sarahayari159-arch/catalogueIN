@@ -62,10 +62,10 @@ const sendVerificationEmail = async (email, token, nom, prenom) => {
 
   try {
     await transporter.sendMail(mailOptions);
-    console.log(`✅ Email de vérification envoyé à ${email}`);
+    console.log(`Email de vérification envoyé à ${email}`);
     return true;
   } catch (error) {
-    console.error('❌ Erreur lors de l\'envoi de l\'email:', error);
+    console.error(' Erreur lors de l\'envoi de l\'email:', error);
     throw new Error('Erreur lors de l\'envoi de l\'email de vérification');
   }
 };
@@ -117,10 +117,10 @@ const sendApprovalEmail = async (email, nom, prenom, defaultPassword) => {
 
   try {
     await transporter.sendMail(mailOptions);
-    console.log(`✅ Email d'approbation envoyé à ${email}`);
+    console.log(`Email d'approbation envoyé à ${email}`);
     return true;
   } catch (error) {
-    console.error('❌ Erreur lors de l\'envoi de l\'email:', error);
+    console.error('Erreur lors de l\'envoi de l\'email:', error);
     throw new Error('Erreur lors de l\'envoi de l\'email d\'approbation');
   }
 };

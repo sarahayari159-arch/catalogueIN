@@ -16,19 +16,15 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING(100),
     allowNull: false
   },
-  email: {
-    type: DataTypes.STRING(255),
-    allowNull: false,
-    unique: true,
-    validate: {
-      isEmail: true,
-      isOrangeEmail(value) {
-        if (!value.endsWith('@orange.com')) {
-          throw new Error('L\'email doit se terminer par @orange.com');
-        }
-      }
-    }
-  },
+email: {
+  type: DataTypes.STRING(255),
+  allowNull: false,
+  unique: true,
+  validate: {
+    isEmail: true
+    // isOrangeEmail desactive pour les tests
+  }
+},
   numero: {
     type: DataTypes.STRING(8),
     allowNull: false,

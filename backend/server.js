@@ -48,12 +48,12 @@ const startServer = async () => {
     await testConnection();
     
     app.listen(PORT, () => {
-      console.log(`\n🚀 Serveur démarré sur le port ${PORT}`);
-      console.log(`📍 URL: http://localhost:${PORT}`);
-      console.log(`🌍 Environnement: ${process.env.NODE_ENV || 'development'}\n`);
+      console.log(`\n Serveur démarré sur le port ${PORT}`);
+      console.log(` URL: http://localhost:${PORT}`);
+      console.log(` Environnement: ${process.env.NODE_ENV || 'development'}\n`);
     });
   } catch (error) {
-    console.error('❌ Impossible de démarrer le serveur:', error);
+    console.error('Impossible de démarrer le serveur:', error);
     process.exit(1);
   }
 };

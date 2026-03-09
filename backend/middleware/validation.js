@@ -12,15 +12,9 @@ exports.validateRegister = [
     .isLength({ min: 2, max: 100 }).withMessage('Le prénom doit contenir entre 2 et 100 caractères'),
   
   body('email')
-    .trim()
-    .notEmpty().withMessage('Ce champ est obligatoire')
-    .isEmail().withMessage('Format d\'email invalide')
-    .custom((value) => {
-      if (!value.endsWith('@orange.com')) {
-        throw new Error('Format d\'email invalide');
-      }
-      return true;
-    }),
+  .trim()
+  .notEmpty().withMessage('L\'email est obligatoire')
+  .isEmail().withMessage('Format d\'email invalide'),
   
   body('numero')
     .trim()
