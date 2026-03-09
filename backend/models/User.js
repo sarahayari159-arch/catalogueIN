@@ -22,12 +22,13 @@ email: {
   unique: true,
   validate: {
     isEmail: true
-    // isOrangeEmail desactive pour les tests
+    // isOrangeEmail desactive juste pour les tests
   }
 },
   numero: {
     type: DataTypes.STRING(8),
     allowNull: false,
+    unique : true,
     validate: {
       is: /^5001[0-9]{4}$/,
       len: [8, 8]

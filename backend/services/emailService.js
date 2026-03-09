@@ -21,7 +21,7 @@ const sendVerificationEmail = async (email, token, nom, prenom) => {
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #ff6600;">Bienvenue ${prenom} ${nom}</h2>
-        <p>Merci de vous être inscrit sur la plateforme de gestion du catalogue d'offres Orange Tunisie.</p>
+        <p>Votre inscription est réussie.</p>
         
         <p>Veuillez cliquer sur le lien ci-dessous pour vérifier votre adresse email :</p>
         

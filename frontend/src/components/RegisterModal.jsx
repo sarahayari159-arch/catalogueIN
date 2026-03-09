@@ -67,7 +67,7 @@ const RegisterModal = ({ isOpen, onClose }) => {
 
     try {
       const response = await axios.post('/api/auth/register', formData)
-      
+
       if (response.data.success) {
         setSuccess(true)
         setTimeout(() => {
@@ -162,19 +162,6 @@ const RegisterModal = ({ isOpen, onClose }) => {
           Rejoignez <span>Catalogue IN</span> dès aujourd'hui.
         </p>
 
-        {error && (
-          <div style={{
-            padding: '12px 16px',
-            background: '#fee',
-            border: '1px solid #fcc',
-            borderRadius: '8px',
-            color: '#c33',
-            fontSize: '0.9rem',
-            marginBottom: '16px'
-          }}>
-            {error}
-          </div>
-        )}
 
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -260,9 +247,22 @@ const RegisterModal = ({ isOpen, onClose }) => {
               ))}
             </select>
           </div>
+          {error && (
+            <div style={{
+              padding: '12px 16px',
+              background: '#fee',
+              border: '1px solid #fcc',
+              borderRadius: '8px',
+              color: '#c33',
+              fontSize: '0.9rem',
+              marginBottom: '16px'
+            }}>
+              {error}
+            </div>
+          )}
 
-          <button 
-            className="btn-primary" 
+          <button
+            className="btn-primary"
             type="submit"
             disabled={loading}
           >

@@ -4,7 +4,7 @@ const { Op } = require('sequelize');
 ///suppression des comptes non verifies (7j)
 const cleanupUnverifiedUsers = async () => {
   try {
-    const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+    const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
     
     const result = await User.destroy({
       where: {

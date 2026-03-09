@@ -15,6 +15,13 @@ exports.register = async (req, res) => {
         message: 'Un compte avec cet email existe déjà'
       });
     }
+    const existingNumero = await User.findOne({ where: { numero } });
+if (existingNumero) {
+  return res.status(400).json({
+    success: false,
+    message: 'Ce numéro de téléphone est déjà utilisé'
+  });
+}
 
     // verifier si la direction existe
     const direction = await Direction.findByPk(direction_id);
